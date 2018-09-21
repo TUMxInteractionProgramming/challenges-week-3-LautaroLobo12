@@ -28,11 +28,19 @@ button, strong {
 
 /* #4 #sweat address both #app-bar s */
 h1 {
+	display: flex;
     background-color: #3F51B5;
     color: white;
+	flex-direction: row;
+	height: 70px;
+	width: 568px;
+	font-size: 30px;
+	align-items: center;
 }
 
-
+#moocus {
+	padding: 13.5px 0px 0px 15px;
+}
 /* CHANNELS LIST */
 
 /* #4 #sweat #channels */
@@ -62,6 +70,13 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+	
+}
+
+#channels {
+	position: absolute;
+	width: 40%;
+	height: 100%;
 }
 
 /* TAB BAR */
@@ -98,6 +113,12 @@ li img {
     border-bottom: 4px solid #3F51B5;
 }
 
+#tab-bar {
+	display: flex;
+	position: relative;
+	bottom: 0;
+	align-items: space-between;
+}
 
 /* MESSAGES */
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
@@ -130,12 +151,17 @@ li img {
 .message p {
     background-color: white;
     padding: 16px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
 }
 
-.message button {
+.message p button {
     background-color: #CDDC39;
     color: black;
-    text-transform: uppercase;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 /* #4 left align own #messages using #margins */
@@ -143,3 +169,30 @@ li img {
     margin-left: 17.5%;
 }
 
+#chat {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 60%;
+	margin-left: 40%;
+}
+
+h3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+#emojis {
+	background-color: white;
+	border: 1px solid black;
+	height: 100px;
+	width: 100px;
+	overflow: auto;
+	display: none;
+}
+
+span {
+	position: absolute;
+	right: 0;
+}
